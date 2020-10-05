@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "2f8576ac-d571-4fa6-a44d-6d5326d689aa",
+		"name": "BootCamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Wallet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "de446d38-85d3-471a-9436-50ba8085ed07",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Wallet id include currency\", function(){\r",
+							"    pm.expect(pm.response.json().wallet_id).to.include(\"BTC\"); \r",
+							"})\r",
+							"\r",
+							"pm.test(\"Wallet length is == 53\", function(){\r",
+							"    pm.expect(pm.response.json().wallet_id).to.have.lengthOf(53); \r",
+							"})\r",
+							"\r",
+							"console.log(pm.response.json().wallet_id)\r",
+							"pm.environment.set(\"wallet_id\", pm.response.json().wallet_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_URL}}/create/wallet",
+					"host": [
+						"{{base_URL}}"
+					],
+					"path": [
+						"create",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet adrress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"wallet_id\": \"BTCukZ67vQCVjRUgjHDaJ6xp3ESzZJMq2V5q3a35ELBzamCHYt64q\",\r\n    \"wallet_id_hash\": \"a17f16e245899fe92b3813b6df170582f44b313c1e3b0528fcff92c4774a6754\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.bitaps.com/btc/testnet/v1/create/wallet/payment/address",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bitaps",
+						"com"
+					],
+					"path": [
+						"btc",
+						"testnet",
+						"v1",
+						"create",
+						"wallet",
+						"payment",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet state",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "97ea50a7-b903-415e-a75d-6975029524fb",
+						"exec": [
+							"console.log(new Date() - pm.response.json().create_date_timestamp)\r",
+							"\r",
+							"\r",
+							"console.log(pm.environment.get(\"wallet_id\"))"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_URL}}/wallet/state/BTCukZ67vQCVjRUgjHDaJ6xp3ESzZJMq2V5q3a35ELBzamCHYt64q?=",
+					"host": [
+						"{{base_URL}}"
+					],
+					"path": [
+						"wallet",
+						"state",
+						"BTCukZ67vQCVjRUgjHDaJ6xp3ESzZJMq2V5q3a35ELBzamCHYt64q"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f1700b26-ca8c-4ffc-b3cb-b78088903640",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c616572d-28d8-415e-9461-e73ac82835c6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "98c10f59-0a4f-4f30-918b-194857a01f9c",
+			"key": "base_URL",
+			"value": "https://api.bitaps.com/btc/testnet/v1"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,19 @@
+image: node 14
+
+stages: -build-app
+  -deploy-app
+
+build-app:
+  stage: build-app
+  script: -npm run build
+
+deploy-app:
+  stage: deploy-app
+  script: -bundle install
+    -bundle exec jekyll build -d public
+
+tests:
+  stage: tests
+  image: andriimsn/andriimsn
+  script:
+    - npm run test-first

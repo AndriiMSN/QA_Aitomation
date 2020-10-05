@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1597695553815' stop='1597695558838'>
+    <name>UI</name>
+    <title>UI</title>
+    <test-cases>
+        <test-case start='1597695553817' status='failed' stop='1597695558837'>
+            <name>Google search</name>
+            <title>Google search</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmine\Spec.js:116:22)
+                    at new Spec (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\setup_jest_globals.js:78:9)
+                    at specFactory (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmine\Env.js:523:24)
+                    at Env.it (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmine\Env.js:592:24)
+                    at Env.it (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:128:23)
+                    at it (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:100:21)
+                    at Suite.&lt;anonymous> (D:\QA_Automation\src\_tests_\mobile-ui.test.ts:17:3)
+                    at addSpecsToSuite (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmine\Env.js:444:51)
+                    at Env.describe (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmine\Env.js:414:11)
+                    at describe (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (D:\QA_Automation\src\_tests_\mobile-ui.test.ts:16:1)
+                    at Runtime._execModule (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-runtime\build\index.js:1217:24)
+                    at Runtime._loadModule (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-runtime\build\index.js:828:12)
+                    at Runtime.requireModule (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-runtime\build\index.js:679:10)
+                    at jasmine2 (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-jasmine2\build\index.js:230:13)
+                    at runTestInternal (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-runner\build\runTest.js:375:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                    at runTest (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-runner\build\runTest.js:455:34)
+                    at Object.worker (C:\Users\andre\AppData\Roaming\npm\node_modules\jest\node_modules\jest-runner\build\testWorker.js:129:12)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

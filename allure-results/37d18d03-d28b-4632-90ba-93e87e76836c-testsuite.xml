@@ -1,0 +1,51 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1597693433594' stop='1597693433601'>
+    <name>Sum</name>
+    <title>Sum</title>
+    <test-cases>
+        <test-case start='1597693433594' status='undefined' stop='1597693433596'>
+            <name>sum function </name>
+            <title>sum function </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was disabled</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1597693433596' status='undefined' stop='1597693433596'>
+            <name>not string </name>
+            <title>not string </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was disabled</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1597693433596' status='undefined' stop='1597693433596'>
+            <name>is defined </name>
+            <title>is defined </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was disabled</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1597693433597' status='passed' stop='1597693433601'>
+            <name>lengthArray </name>
+            <title>lengthArray </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

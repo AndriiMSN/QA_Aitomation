@@ -1,0 +1,26 @@
+{
+  "name": "Bootcamp",
+  "version": "1.0.0",
+  "description": "QA Bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriiMSN/QA_Bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndriiMSN/QA_Bootcamp/issues"
+  },
+  "homepage": "https://github.com/AndriiMSN/QA_Bootcamp#readme",
+  "dependencies": {
+    "playwright-chromium": "^1.4.1"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
